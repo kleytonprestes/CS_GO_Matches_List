@@ -1,4 +1,4 @@
-package com.example.csgomatcheslist
+package com.example.csgomatcheslist.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

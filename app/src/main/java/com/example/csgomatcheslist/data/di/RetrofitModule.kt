@@ -1,4 +1,4 @@
-package data.di
+package com.example.csgomatcheslist.data.di
 
 import com.example.csgomatcheslist.BuildConfig.DEBUG
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
