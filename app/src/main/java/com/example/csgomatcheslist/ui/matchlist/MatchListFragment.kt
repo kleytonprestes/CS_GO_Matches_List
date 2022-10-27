@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.csgomatcheslist.databinding.FragmentFirstBinding
+import com.example.csgomatcheslist.databinding.FragmentMatchListBinding
 
 class MatchListFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentMatchListBinding? = null
 
     private val binding get() = _binding
 
@@ -18,7 +18,7 @@ class MatchListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentMatchListBinding.inflate(inflater, container, false)
         return binding?.root
 
     }
