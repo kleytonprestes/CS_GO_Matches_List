@@ -10,8 +10,10 @@
     <color name="white_20">#20FFFFFF</color>
     <color name="white_50">#50FFFFFF</color>
 
-    <color name="gray_c4c4c4">#C4C4C4</color>
+    <color name="grey_c4c4c4">#C4C4C4</color>
     <color name="red_f42a35">#F42A35</color>
     <color name="blue_272639">#272639</color>
+    <color name="grey_20fafafa">#20FAFAFA</color>
+    <color name="grey_6c6b7e">#6C6B7E</color>
     <color name="bg_color">#252525</color>
 </resources>

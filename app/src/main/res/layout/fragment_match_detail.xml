@@ -2,24 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/item_background_rounded"
-    android:layout_marginBottom="24dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.matchlist.MatchListFragment">
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/match_time"
-        android:background="@drawable/red_rounded_background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="ao vivo"
-        />
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".ui.MainActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_first_team"
@@ -37,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:textSize="10sp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/iv_first_team"
         app:layout_constraintEnd_toEndOf="@id/iv_first_team"
@@ -54,7 +41,7 @@
         android:layout_marginBottom="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/match_time"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_second_team"
@@ -72,44 +59,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:textSize="10sp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/iv_second_team"
         app:layout_constraintEnd_toEndOf="@id/iv_second_team"
         app:layout_constraintTop_toBottomOf="@id/iv_second_team"
         tools:text="Team 2"/>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/white_20"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_name_second_team"
-        />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_league"
-        android:background="@drawable/round_grey_background"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/divider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
-
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_league"
+        android:id="@+id/tv_match_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:layout_margin="8dp"
-        app:layout_constraintTop_toBottomOf="@id/divider"
-        app:layout_constraintStart_toEndOf="@id/iv_league"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/iv_first_team"
+        app:layout_constraintEnd_toEndOf="@id/iv_second_team"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_second_team"
+        tools:text="Hoje, 21:00"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_player_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_match_time"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="League + serie"/>
+        tools:listitem="@layout/item_player_detail"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
