@@ -1,0 +1,6 @@
+A aplicação é sobre as partidas de cs:go que estão ocorrendo ou ainda irão ocorrer, foi desenvolvido com Kotlin, utilizando navigation component, hilt, glide, Retrofit, Coroutines e com arquitetura MVVM.
+As informações das partidas retornam da api panda score, onde tenho acesso a lista de partidas, para conseguir os detalhes de cada partida como os nomes dos jogadores e algumas informaações a mais, é necessario pagar a assinatura para acessar essa api, então coloquei apenas algumas informações que tinha acesso.
+
+
+The application is about the cs:go matches that are happening or will happen, it was developed with Kotlin, using navigation component, hilt, glide, Retrofit, Coroutines and with MVVM architecture.
+The match information comes back from the panda score api, where I have access to the match list, to get the details of each match like the names of the players and some more information, it is necessary to pay the subscription to access this api, so I just put some information he had access to.
