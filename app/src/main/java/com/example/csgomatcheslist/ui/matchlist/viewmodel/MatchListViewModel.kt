@@ -1,4 +1,4 @@
-package com.example.csgomatcheslist.ui.matchlist
+package com.example.csgomatcheslist.ui.matchlist.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.*
@@ -24,7 +24,11 @@ class MatchListViewModel @Inject constructor(
         when(val requestApi = safeRequest {
             repository.getMatchList()
         }) {
-            is SafeResponse.Success ->{}
+            is SafeResponse.Success ->{
+                val result = requestApi.value
+                _response.value = result
+
+            }
             is SafeResponse.GenericError ->{}
             is SafeResponse.NetworkError ->{}
         }

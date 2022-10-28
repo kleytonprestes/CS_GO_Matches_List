@@ -6,11 +6,11 @@
     android:layout_marginBottom="24dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.matchlist.MatchListFragment">
+    tools:context=".ui.matchlist.view.MatchListFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/match_time"
-        android:background="@drawable/red_rounded_background"
+        android:background="@drawable/rounded_red_background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -23,7 +23,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_first_team"
-        android:background="@drawable/round_grey_background"
+        app:srcCompat="@drawable/round_grey_background"
         android:layout_width="@dimen/dimen_60_dp"
         android:layout_height="@dimen/dimen_60_dp"
         android:layout_marginEnd="20dp"
@@ -34,14 +34,17 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name_first_team"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/iv_first_team"
         app:layout_constraintEnd_toEndOf="@id/iv_first_team"
         app:layout_constraintTop_toBottomOf="@id/iv_first_team"
-        tools:text="Team 1"/>
+        tools:text="Team sdsddsdsdsds1"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textview_vs"
@@ -58,7 +61,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_second_team"
-        android:background="@drawable/round_grey_background"
+        app:srcCompat="@drawable/round_grey_background"
         android:layout_width="@dimen/dimen_60_dp"
         android:layout_height="@dimen/dimen_60_dp"
         android:layout_marginStart="20dp"
@@ -69,14 +72,17 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name_second_team"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
         app:layout_constraintStart_toStartOf="@id/iv_second_team"
         app:layout_constraintEnd_toEndOf="@id/iv_second_team"
         app:layout_constraintTop_toBottomOf="@id/iv_second_team"
-        tools:text="Team 2"/>
+        tools:text="Teamdsdsdsdsdsdsdsdsdsdsd 2"/>
 
     <View
         android:id="@+id/divider"
@@ -89,7 +95,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_league"
-        android:background="@drawable/round_grey_background"
+        app:srcCompat="@drawable/round_grey_background"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginTop="8dp"

@@ -7,6 +7,36 @@
     android:background="@color/bg_color"
     tools:context=".ui.MainActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/Theme.CSGOMatchesList.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bg_color"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            app:popupTheme="@style/Theme.CSGOMatchesList.PopupOverlay">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_league_serie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_marginEnd="?android:attr/actionBarSize"
+                android:layout_marginTop="10dp"
+                tools:text="Team 1"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_first_team"
         android:background="@drawable/round_grey_background"
@@ -41,7 +71,7 @@
         android:layout_marginBottom="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_second_team"
@@ -88,6 +118,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_player_detail"
         />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

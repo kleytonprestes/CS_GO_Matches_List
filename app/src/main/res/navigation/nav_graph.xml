@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.csgomatcheslist.ui.matchlist.MatchListFragment"
+        android:name="com.example.csgomatcheslist.ui.matchlist.view.MatchListFragment"
         android:label="@string/matches"
         tools:layout="@layout/fragment_match_list">
 

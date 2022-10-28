@@ -1,5 +1,6 @@
 package com.example.csgomatcheslist.data.di
 
+import com.example.csgomatcheslist.BuildConfig.BASE_URL
 import com.example.csgomatcheslist.BuildConfig.DEBUG
 import com.example.csgomatcheslist.data.remote.api.Api
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -28,7 +29,7 @@ class RetrofitModule {
     @Singleton
     @Provides
     fun retrofit(okHttpClient: OkHttpClient) = Retrofit.Builder()
-        .baseUrl("")
+        .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .client(okHttpClient)
