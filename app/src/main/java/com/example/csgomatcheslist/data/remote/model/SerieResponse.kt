@@ -1,16 +1,20 @@
 package com.example.csgomatcheslist.data.remote.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class SerieResponse(
-    val begin_at: String,
-    val end_at: String,
-    val full_name: String,
-    val id: Int,
-    val league_id: Int,
-    val modified_at: String,
-    val name: String,
-    val season: String,
-    val slug: String,
-    val winner_id: Any,
-    val winner_type: String,
-    val year: Int
-)
+    var begin_at: String?,
+    var end_at: String?,
+    var full_name: String?,
+    var id: Int?,
+    var league_id: Int?,
+    var modified_at: String?,
+    var name: String?,
+    var season: String?,
+    var slug: String?,
+    var winner_id: Int?,
+    var winner_type: String?,
+    var year: Int?
+): Parcelable

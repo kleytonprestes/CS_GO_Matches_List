@@ -12,20 +12,20 @@ class MatchViewHolder(
 
         fun bind(matchResponse: MatchResponse) {
 
-            val leaguePlusSerie = matchResponse.league.name.plus(" ").plus(matchResponse.serie.name)
+            val leaguePlusSerie = matchResponse.league?.name.plus(" ").plus(matchResponse.serie?.name)
 
-            itemBinding.tvNameFirstTeam.text = matchResponse.name.split("vs").first()
-            itemBinding.tvNameSecondTeam.text = matchResponse.name.split("vs")[1]
+            itemBinding.tvNameFirstTeam.text = matchResponse.name?.split("vs")?.first()
+            itemBinding.tvNameSecondTeam.text = matchResponse.name?.split("vs")?.get(1) ?: ""
             itemBinding.tvLeague.text = leaguePlusSerie
 
             if (matchResponse.opponents.isNotEmpty()) {
-                loadImage(matchResponse.opponents.first().opponent.image_url, itemBinding.ivFirstTeam)
+                loadImage(matchResponse.opponents.first().opponent?.image_url, itemBinding.ivFirstTeam)
             }
             if (matchResponse.opponents.size > 1){
 
-                loadImage(matchResponse.opponents[1].opponent.image_url, itemBinding.ivSecondTeam)
+                loadImage(matchResponse.opponents[1].opponent?.image_url, itemBinding.ivSecondTeam)
             }
-            loadImage(matchResponse.league.image_url, itemBinding.ivLeague)
+            loadImage(matchResponse.league?.image_url, itemBinding.ivLeague)
 
         }
 

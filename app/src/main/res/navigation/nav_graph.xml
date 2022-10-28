@@ -3,13 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/MatchListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/MatchListFragment"
         android:name="com.example.csgomatcheslist.ui.matchlist.view.MatchListFragment"
         android:label="@string/matches"
         tools:layout="@layout/fragment_match_list">
 
+        <action
+            android:id="@+id/action_MatchListFragment_to_matchDetailFragment"
+            app:destination="@id/matchDetailFragment" >
+        </action>
     </fragment>
+    <fragment
+        android:id="@+id/matchDetailFragment"
+        android:name="com.example.csgomatcheslist.ui.matchDetails.MatchDetailFragment"
+        android:label="MatchDetailFragment"
+        tools:layout="@layout/fragment_match_detail"
+        >
+        <argument
+            android:name="MatchResponse"
+            app:argType="com.example.csgomatcheslist.data.remote.model.MatchResponse" />
+    </fragment>
+
+
 </navigation>

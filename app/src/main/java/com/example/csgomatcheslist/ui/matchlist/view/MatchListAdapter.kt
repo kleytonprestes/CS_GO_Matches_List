@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.csgomatcheslist.data.remote.model.MatchResponse
 import com.example.csgomatcheslist.databinding.ItemMatchBinding
-import com.example.csgomatcheslist.domain.model.MatchItemClickListener
 
 class MatchListAdapter(
     private val list: List<MatchResponse>,
@@ -23,6 +22,9 @@ class MatchListAdapter(
     override fun onBindViewHolder(holder: MatchViewHolder, position: Int) {
         val matchResponse = list[position]
         holder.bind(matchResponse)
+        holder.itemView.setOnClickListener {
+            listener.onClick(list[position])
+        }
     }
 
 }
