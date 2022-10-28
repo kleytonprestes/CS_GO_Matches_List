@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/matchDetailFragment"
-        android:name="com.example.csgomatcheslist.ui.matchDetails.MatchDetailFragment"
+        android:name="com.example.csgomatcheslist.ui.matchDetails.view.MatchDetailFragment"
         android:label="MatchDetailFragment"
         tools:layout="@layout/fragment_match_detail"
         >

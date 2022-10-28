@@ -21,7 +21,7 @@ class MatchListAdapter(
 
     override fun onBindViewHolder(holder: MatchViewHolder, position: Int) {
         val matchResponse = list[position]
-        holder.bind(matchResponse)
+        holder.bind(matchResponse, holder.itemView.context)
         holder.itemView.setOnClickListener {
             listener.onClick(list[position])
         }

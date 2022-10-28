@@ -34,5 +34,6 @@ data class MatchResponse(
     val videogame: VideogameResponse?,
     val winner: WinnerInfoResponse?,
     val winner_id: Int?,
-    val winner_type: String?
+    val winner_type: String?,
+    var isOnline: Boolean = true
 ): Parcelable

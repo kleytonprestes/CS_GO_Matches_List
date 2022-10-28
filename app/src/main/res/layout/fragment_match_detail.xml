@@ -50,9 +50,11 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name_first_team"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:textSize="10sp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/iv_first_team"
@@ -86,9 +88,11 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name_second_team"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:textSize="10sp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/iv_second_team"
